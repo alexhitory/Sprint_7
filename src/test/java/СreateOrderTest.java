@@ -1,12 +1,12 @@
-import ApiMetods.CreateCourier;
-import ApiMetods.CreateOrders;
-import ApiMetods.DeleteCourier;
-import ApiMetods.LoginCourier;
+import apiMetods.CreateCourier;
+import apiMetods.CreateOrders;
+import apiMetods.DeleteCourier;
+import apiMetods.LoginCourier;
 
-import Credentials.CreateCourierCredentials;
-import Credentials.CreateOrdersCredentials;
-import Credentials.DeleteCourierCredentials;
-import Credentials.LoginCourierCredentials;
+import credentials.CreateCourierCredentials;
+import credentials.CreateOrdersCredentials;
+import credentials.DeleteCourierCredentials;
+import credentials.LoginCourierCredentials;
 
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.AfterClass;
@@ -15,11 +15,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
+import static org.apache.http.HttpStatus.SC_CREATED;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
 
 @RunWith(Parameterized.class)
-public class CreateOrderTest {
+public class СreateOrderTest {
     private static String login = "Pikachu";
     private static String password = "12345";
     private static String firstName = "Pica";
@@ -34,7 +35,7 @@ public class CreateOrderTest {
     private static String color2;
     private final String[] color = {color1, color2};
 
-    public CreateOrderTest(String color1, String color2) {
+    public СreateOrderTest(String color1, String color2) {
         this.color1 = color1;
         this.color2 = color2;
 
@@ -81,7 +82,7 @@ public class CreateOrderTest {
         createOrdersApi
                 .createOrder(createOrdersCredentials)
                 .then()
-                .statusCode(201)
+                .statusCode(SC_CREATED)
                 .assertThat()
                 .body("track", notNullValue());
     }

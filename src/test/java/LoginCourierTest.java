@@ -1,10 +1,10 @@
-import ApiMetods.CreateCourier;
-import ApiMetods.DeleteCourier;
-import ApiMetods.LoginCourier;
+import apiMetods.CreateCourier;
+import apiMetods.DeleteCourier;
+import apiMetods.LoginCourier;
 
-import Credentials.CreateCourierCredentials;
-import Credentials.DeleteCourierCredentials;
-import Credentials.LoginCourierCredentials;
+import credentials.CreateCourierCredentials;
+import credentials.DeleteCourierCredentials;
+import credentials.LoginCourierCredentials;
 
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.AfterClass;
@@ -13,6 +13,7 @@ import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.core.IsEqual.equalTo;
+import static org.apache.http.HttpStatus.*;
 
 public class LoginCourierTest {
 
@@ -53,59 +54,59 @@ public class LoginCourierTest {
         loginCourier
                 .loginCourier(loginCourierCredentials)
                 .then()
-                .statusCode(200)
+                .statusCode(SC_OK)
                 .assertThat()
                 .body("id", notNullValue());
     }
 
     @Test
     @DisplayName("Создания курьера без логина")
-    public void negativeAuthorizationCourierTest_1() {
+    public void authorizationCourierWithoutLoginTest() {
         LoginCourier loginCourier = new LoginCourier();
         LoginCourierCredentials loginCourierCredentials = new LoginCourierCredentials(null, password);
         loginCourier
                 .loginCourier(loginCourierCredentials)
                 .then()
-                .statusCode(400)
+                .statusCode(SC_BAD_REQUEST)
                 .assertThat()
                 .body("message", equalTo("Недостаточно данных для входа"));
     }
 
     @Test
     @DisplayName("Создания курьера без пароля")
-    public void negativeAuthorizationCourierTest_2() {
+    public void authorizationCourierWithoutPasswordTest() {
         LoginCourier loginCourier = new LoginCourier();
         LoginCourierCredentials loginCourierCredentials = new LoginCourierCredentials(login, "");
         loginCourier
                 .loginCourier(loginCourierCredentials)
                 .then()
-                .statusCode(400)
+                .statusCode(SC_BAD_REQUEST)
                 .assertThat()
                 .body("message", equalTo("Недостаточно данных для входа"));
     }
 
     @Test
     @DisplayName("Передан не валидный логин")
-    public void negativeAuthorizationCourierTest_3() {
+    public void authorizationCourierWithNoValidLoginTest() {
         LoginCourier loginCourier = new LoginCourier();
         LoginCourierCredentials loginCourierCredentials = new LoginCourierCredentials(notValidLogin, password);
         loginCourier
                 .loginCourier(loginCourierCredentials)
                 .then()
-                .statusCode(404)
+                .statusCode(SC_NOT_FOUND)
                 .assertThat()
                 .body("message", equalTo("Учетная запись не найдена"));
     }
 
     @Test
     @DisplayName("Передан не валидный пароль")
-    public void negativeAuthorizationCourierTest_4() {
+    public void authorizationCourierWithNoValidPasswordTest() {
         LoginCourier loginCourier = new LoginCourier();
         LoginCourierCredentials loginCourierCredentials = new LoginCourierCredentials(login, notValidPassword);
         loginCourier
                 .loginCourier(loginCourierCredentials)
                 .then()
-                .statusCode(404)
+                .statusCode(SC_NOT_FOUND)
                 .assertThat()
                 .body("message", equalTo("Учетная запись не найдена"));
     }

@@ -1,15 +1,16 @@
-import ApiMetods.CreateCourier;
-import ApiMetods.DeleteCourier;
-import ApiMetods.LoginCourier;
+import apiMetods.CreateCourier;
+import apiMetods.DeleteCourier;
+import apiMetods.LoginCourier;
 
-import Credentials.CreateCourierCredentials;
-import Credentials.DeleteCourierCredentials;
-import Credentials.LoginCourierCredentials;
+import credentials.CreateCourierCredentials;
+import credentials.DeleteCourierCredentials;
+import credentials.LoginCourierCredentials;
 
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.AfterClass;
 import org.junit.Test;
 
+import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class CreateCourierTest {
@@ -42,46 +43,46 @@ public class CreateCourierTest {
         createCourier
                 .createCourier(courier)
                 .then()
-                .statusCode(201)
+                .statusCode(SC_CREATED)
                 .assertThat()
                 .body("ok", equalTo(true));
     }
 
     @Test
     @DisplayName("Создание курьера. Создание уже существующего курьера")
-    public void negativeCreateCourierTest_1() {
+    public void createExistingCourierTest() {
         CreateCourier createCourier = new CreateCourier();
         CreateCourierCredentials courier = new CreateCourierCredentials(login, password, firstName);
         createCourier
                 .createCourier(courier)
                 .then()
-                .statusCode(409)
+                .statusCode(SC_CONFLICT)
                 .assertThat()
                 .body("message", equalTo("Этот логин уже используется"));
     }
 
     @Test
     @DisplayName("Создание курьера.Не передан логин")
-    public void negativeCreateCourierTest_2() {
+    public void createCourierWithoutLoginTest() {
         CreateCourier createCourier = new CreateCourier();
         CreateCourierCredentials courier = new CreateCourierCredentials(null, password, firstName);
         createCourier
                 .createCourier(courier)
                 .then()
-                .statusCode(400)
+                .statusCode(SC_BAD_REQUEST)
                 .assertThat()
                 .body("message", equalTo("Недостаточно данных для создания учетной записи"));
     }
 
     @Test
     @DisplayName("Создание курьера.Не передан пароль")
-    public void negativeCreateCourierTest_3() {
+    public void createCourierWithoutPasswordTest() {
         CreateCourier createCourier = new CreateCourier();
         CreateCourierCredentials courier = new CreateCourierCredentials(login, null, firstName);
         createCourier
                 .createCourier(courier)
                 .then()
-                .statusCode(400)
+                .statusCode(SC_BAD_REQUEST)
                 .assertThat()
                 .body("message", equalTo("Недостаточно данных для создания учетной записи"));
     }

@@ -1,4 +1,4 @@
-package ApiMetods;
+package apiMetods;
 
 import io.restassured.response.Response;
 
@@ -8,7 +8,7 @@ public abstract class BaseApiClass {
 
     private static final String BASE_URL = "https://qa-scooter.praktikum-services.ru";
 
-    protected Response GetRequest(String path) {
+    protected Response getRequest(String path) {
         return given()
                 .log()
                 .all()
@@ -18,7 +18,7 @@ public abstract class BaseApiClass {
                 .thenReturn();
     }
 
-    protected Response PostRequest(String path, Object body) {
+    protected Response postRequest(String path, Object body) {
         return given()
                 .log()
                 .all()
@@ -29,7 +29,7 @@ public abstract class BaseApiClass {
                 .thenReturn();
     }
 
-    protected Response DeleteRequest(String path, Object body) {
+    protected Response deleteRequest(String path, Object body) {
         return given()
                 .log()
                 .all()
