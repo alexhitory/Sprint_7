@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="814cccbe-5687-4533-81c4-c5292db506a3" name="Changes" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ApiMetods/BaseApiClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiMetods/BaseApiClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ApiMetods/CreateCourier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiMetods/CreateCourier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ApiMetods/CreateOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiMetods/CreateOrders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ApiMetods/DeleteCourier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiMetods/DeleteCourier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ApiMetods/LoginCourier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiMetods/LoginCourier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Credentials/CreateCourierCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/credentials/createCourierCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Credentials/CreateOrdersCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/credentials/createOrdersCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Credentials/DeleteCourierCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/credentials/deleteCourierCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Credentials/LoginCourierCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/credentials/loginCourierCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreateCourierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateCourierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreateOrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/createOrderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginCourierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginCourierTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2lqd36xaQCD5biSL0mo1KevTmoh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.CreateCourierTest.executor": "Run",
+    "JUnit.LoginCourierTest.executor": "Run",
+    "JUnit.createOrderTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/practicum/Sprint_7",
+    "onboarding.tips.debug.path": "C:/practicum/Sprint_7/src/main/java/org/example/Main.java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\practicum\Sprint_7" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.createOrderTest">
+    <configuration name="CreateCourierTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CreateCourierTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginCourierTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginCourierTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="createOrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="createOrderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.createOrderTest" />
+        <item itemvalue="JUnit.LoginCourierTest" />
+        <item itemvalue="JUnit.CreateCourierTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
+        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="814cccbe-5687-4533-81c4-c5292db506a3" name="Changes" comment="" />
+      <created>1725911340546</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725911340546</updated>
+    </task>
+    <task id="LOCAL-00001" summary="commit">
+      <option name="closed" value="true" />
+      <created>1725911482016</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725911482016</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit">
+      <option name="closed" value="true" />
+      <created>1725911721082</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725911721082</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add allure report" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
